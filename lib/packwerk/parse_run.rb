@@ -40,7 +40,7 @@ module Packwerk
 
       cache_dir = run_context.cache_directory
 
-      processed_files = T.let(nil, T.untyped)
+    processed_files = T.let(nil, T.untyped)
       puts "Starting RustParser..."
       bm = Benchmark.measure do
         processed_files_hashes = RustParser.get_unresolved_references(Pathname.pwd, cache_dir, @relative_file_set.to_a)
